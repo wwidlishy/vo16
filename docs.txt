@@ -1,0 +1,38 @@
+normal assembly:            vo16 assembly:
+    mov bx, 5                   [mv] bx, 5
+    cmp bx, 5                   [cp] bx, 5
+    int 10h                     [it] 10h
+    jmp label                   [jmp] label
+    je label                    [jmp(=)] label
+    jl label                    [jmp(<)] label
+    jle label                   [jmp(<=)] label
+    jz label                    [jmp(0)] label
+    jne label                   [jmp(!=)] label
+    jnz label                   [jmp(!0)] label
+    jc label                    [jmp(carry)] label
+    jnc label                   [jmp(!carry)] label
+    jo label                    [jmp(overflow)] label
+    jno label                   [jmp(!overflow)] label
+    jg label                    [jmp(>)] label
+    jge label                   [jmp(>=)] label
+    add bx, 4                   [+] bx, 4
+    sub bx, 2                   [-] bx, 2
+    mul cl                      [*] cl
+    div dl                      [/] dl
+    inc bx                      [++] bx
+    dec bx                      [--] bx
+    and al, 0xF0                [&] al, 0xF0
+    or al, 0xF0                 [|] al, 0xF0
+    xor cl, 0xF0                [^] cl, 0xF0
+    not dl                      [!] dl
+    shl al, 2                   [<<] dl
+    shr al, 2                   [>>] dl
+    rol al, 2                   [r<] al, 2
+    ror al, 2                   [r>] al, 2
+    push al                     [push] al 
+    pop al                      [pull] al
+    call subrutine              [call] subrutine
+    ret                         [return]
+    lea ax, [bx + 4]            [get_address] ax,[bx + 4]
+    nop                         [pass]
+
